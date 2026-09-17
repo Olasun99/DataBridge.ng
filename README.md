@@ -1,11 +1,21 @@
-<div align="center">
+# ScribeHealth
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+## Phase 0
 
-  <h1>Built with AI Studio</h2>
+A health-data digitization platform.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+### Setup
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+1. Copy `.env.example` to `.env`.
+2. Install dependencies: `npm install`
+3. Start the DB: `docker-compose -f infra/docker-compose.yml up -d`
+4. Run migrations: `npm run dev -w packages/db` (or appropriate prisma commands).
 
-</div>
+### Run
+
+`npm run dev`
+
+### Test
+
+Unit tests: `npm run test`
+E2E tests: `npm run test:e2e -w web`
